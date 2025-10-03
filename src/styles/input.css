@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap'); /*font-light, font-semibold, font-bold*/
+
+@import "tailwindcss";
+
+@custom-variant hofa (&:hover, &:focus, &:active);
+
+@theme {
+    /*primary*/
+    --color-primary-blue-500:hsl(223, 87%, 63%);
+    
+    /*Secondary*/
+    --color-secondary-blue-200:hsl(223, 100%, 88%);
+    --color-secondary-red-400:hsl(354, 100%, 66%);
+
+    /*neutral*/
+    --color-neutral-gray-400:hsl(0, 0%, 59%);
+    --color-neutral-blue-950:hsl(209, 33%, 12%);
+}
+
+
+
+
+@layer base {
+    body {
+        font-family: "Libre Franklin", sans-serif;
+        @apply antialiased text-balance;
+    }
+}
+
+@layer components {
+    .icon {
+        @apply text-primary-blue-500  border-1 border-secondary-blue-200 p-2 rounded-full;
+    }
+    .error-state {
+        @apply border text-secondary-red-400 border-secondary-red-400 italic;
+    }
+    
+}
